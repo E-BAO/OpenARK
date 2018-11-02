@@ -235,12 +235,5 @@ if( ${BUILD_TESTS} )
   target_include_directories( ${TEST_NAME} PRIVATE ${INCLUDE_DIR} )
 endif( ${BUILD_TESTS} )
 
-set( DEPTH_NAME "DepthDemo" )
-add_executable( ${DEPTH_NAME} DepthDemo.cpp )
-target_include_directories( ${DEPTH_NAME} PRIVATE ${INCLUDE_DIR} )
-target_link_libraries( ${DEPTH_NAME} ${DEPENDENCIES} ${LIB_NAME} )
-set_target_properties( ${DEPTH_NAME} PROPERTIES OUTPUT_NAME ${LIB_NAME} )
-set_target_properties( ${DEPTH_NAME} PROPERTIES COMPILE_FLAGS ${TARGET_COMPILE_FLAGS} )
-
 # Create source group for headers
 source_group( "Header Files" FILES ${HEADERS} )
